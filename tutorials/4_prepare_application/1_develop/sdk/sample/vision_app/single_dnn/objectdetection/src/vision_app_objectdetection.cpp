@@ -35,7 +35,7 @@
 /* -------------------------------------------------------- */
 /* static                                                   */
 /* -------------------------------------------------------- */
-static PPL_SsdParam s_ssd_param = {PPL_DNN_OUTPUT_DETECTIONS,PPL_DNN_OUTPUT_DETECTIONS, PPL_DEFAULT_THRESHOLD, PPL_SSD_INPUT_TENSOR_WIDTH, PPL_SSD_INPUT_TENSOR_HEIGHT}; //Set Max detections=10 Default Threshold= 0.3
+static PPL_SsdParam s_ssd_param = {PPL_DNN_OUTPUT_DETECTIONS,PPL_DNN_OUTPUT_DETECTIONS, PPL_DNN_OUTPUT_ELEMENTS, PPL_DEFAULT_THRESHOLD, PPL_IOU_THRESHOLD, PPL_SSD_INPUT_TENSOR_WIDTH, PPL_SSD_INPUT_TENSOR_HEIGHT};
 static bool  s_is_evp_exit = false;
 static bool  s_stream_stopped = true;
 static int   s_private_data = 0;

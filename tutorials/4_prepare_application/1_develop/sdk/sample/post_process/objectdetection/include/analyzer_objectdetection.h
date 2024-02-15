@@ -23,11 +23,13 @@
 /* define                                                   */
 /* -------------------------------------------------------- */
 #define PPL_ID_VERSION "00.01.01.00"            // Format: "AA.XX.YY.ZZ" where AA: ID, XX.YY.ZZ: Version
-#define PPL_SSD_INPUT_TENSOR_WIDTH       (320)  // Derived from Custom Vision Object Detection Model on AITRIOS Console
-#define PPL_SSD_INPUT_TENSOR_HEIGHT      (320)  // Derived from Custom Vision Object Detection Model on AITRIOS Console
-#define PPL_DNN_OUTPUT_DETECTIONS        (64)   // Derived from Custom Vision Object Detection Model on AITRIOS Console
+#define PPL_SSD_INPUT_TENSOR_WIDTH       (128)  // Derived from Custom Vision Object Detection Model on AITRIOS Console
+#define PPL_SSD_INPUT_TENSOR_HEIGHT      (128)  // Derived from Custom Vision Object Detection Model on AITRIOS Console
+#define PPL_DNN_OUTPUT_DETECTIONS        (1008)   // Derived from Custom Vision Object Detection Model on AITRIOS Console
+#define PPL_DNN_OUTPUT_ELEMENTS          (15)
 #define PPL_DEFAULT_THRESHOLD            (0.3)  // Default value
-#define PPL_DNN_OUTPUT_TENSOR_SIZE(dnnOutputDetections)  ((dnnOutputDetections * 4) + dnnOutputDetections + dnnOutputDetections + 1)    // bbox(dnnOutputDetections*4) + class(dnnOutputDetections) + scores(dnnOutputDetections) + numOfDetections(1) 
+#define PPL_IOU_THRESHOLD                (0.3)
+#define PPL_DNN_OUTPUT_TENSOR_SIZE(dnnOutputDetections, dnnOutputElements)  (dnnOutputDetections * dnnOutputElements)    // bbox(dnnOutputDetections*4) + class(dnnOutputDetections) + scores(dnnOutputDetections) + numOfDetections(1) 
 
 /* enum */
 typedef enum {
@@ -40,8 +42,10 @@ typedef enum {
 
 typedef struct tagPPL_SsdParam{
     uint16_t dnnOutputDetections;
+    uint16_t dnnOutputElements;
     uint16_t maxDetections;
     float threshold;
+    float iou_thres;
     uint16_t inputWidth;
     uint16_t inputHeight;
 } PPL_SsdParam;
