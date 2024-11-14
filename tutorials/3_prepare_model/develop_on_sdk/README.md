@@ -1,6 +1,6 @@
-# Develop AI model on "**Vision and Sensing Application SDK**"
+# Develop AI model on "**Edge Application SDK**"
 
-"**Vision and Sensing Application SDK**" provides following functions to prepare AI model:
+"**Edge Application SDK**" provides following functions to prepare AI model:
 
 ## 1. Transfer learning
 This part describes how to train an AI model. <br>
@@ -22,7 +22,7 @@ See [README](./3_import_to_console/README.md) for details.
 > **NOTE**
 >
 > Azure Blob Storage is required to import an AI model to "**Console for AITRIOS**" using the notebook provided by the SDK.<br>
-> If you want to import an AI model from a local environment, use "**Console UI**". See ["**Console User Manual**"](https://developer.aitrios.sony-semicon.com/documents/?page=console_user_manual&lang=ja) for details.
+> If you want to import an AI model from a local environment, use "**Console UI**". See ["**Console User Manual**"](https://developer.aitrios.sony-semicon.com/en/documents/console-user-manual) for details.
 
 ## 4. Deploy model to Edge AI Device
 

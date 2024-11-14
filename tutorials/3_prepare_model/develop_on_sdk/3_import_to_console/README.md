@@ -5,7 +5,7 @@ By running the [import_to_console.ipynb](./import_to_console.ipynb), you can imp
 > **NOTE**
 >
 > Azure Blob Storage is required to import an AI model to "**Console for AITRIOS**" using this notebook.<br>
-> If you want to import an AI model from a local environment, use "**Console UI**". See ["**Console User Manual**"](https://developer.aitrios.sony-semicon.com/documents/?page=console_user_manual&lang=ja) for details.
+> If you want to import an AI model from a local environment, use "**Console UI**". See ["**Console User Manual**"](https://developer.aitrios.sony-semicon.com/en/documents/console-user-manual) for details.
 
 ## Get started
 ### 1. Setup "**Console Access Library**"
@@ -28,8 +28,7 @@ Place setting file (**`./configuration.json`** file) for importing.
 		"converted": false,
 		"vendor_name": "",
 		"comment": "",
-		"network_type": "0",
-		"labels": []
+		"network_type": "0"
 	}
     ```
 
@@ -56,9 +55,8 @@ The parameters required to run this notebook are :
 |**`vendor_name`**|vendor name|String. <br>See NOTE. |Optional|Used for "**Console Access Library**" API:<br>**`ai_model.ai_model.AIModel.import_base_model`**|
 |**`comment`**|Description of the AI model and version|String. <br>See NOTE. |Optional|Used for "**Console Access Library**" API:<br>**`ai_model.ai_model.AIModel.import_base_model`**|
 |**`network_type`**|network type|String. <br>See NOTE. |Optional<br>If omitted, set default value:"0"  *1|Used for "**Console Access Library**" API:<br>**`ai_model.ai_model.AIModel.import_base_model`**|
-|**`labels`**|Label names|["label01", "label02", ...]<br>See NOTE. |Optional|Used for "**Console Access Library**" API:<br>**`ai_model.ai_model.AIModel.import_base_model`**|
 
-*1 SDK suppose to use "**Vision and Sensing Application**", therefore set default value automatically. 
+*1 SDK suppose to use "**Edge Application**", therefore set default value automatically. 
 
 > **NOTE**<br>
 > See [API Reference](https://developer.aitrios.sony-semicon.com/development-guides/reference/api-references/) of "**Console Access Library**" for other restrictions.
